@@ -8,10 +8,30 @@
 import UIKit
 
 class AlbumPhotoCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    var cellImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    let cellIdentifier = "AlbumPhotoCellIdentifier"
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        addViews()
+    }
+    func addViews(){
+        addSubview(cellImageView)
+        cellImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        cellImageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        cellImageView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        cellImageView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
 
+    }
 }
