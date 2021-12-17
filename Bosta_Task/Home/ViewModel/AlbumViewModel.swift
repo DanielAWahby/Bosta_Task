@@ -8,13 +8,13 @@
 import Foundation
 
 struct AlbumViewModel {
-    let userId:Int
-    let id:Int
-    let title:String
+    let userId:Int?
+    let id:Int?
+    let title:String?
     
     init(album:Album) {
         self.userId = album.userId
         self.id = album.id
-        self.name = album.name
+        self.title = album.title
     }
 }
