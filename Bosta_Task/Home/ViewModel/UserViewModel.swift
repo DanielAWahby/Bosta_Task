@@ -10,19 +10,24 @@ import Foundation
 
 struct UserViewModel{
     
-    let id:Int
-    let name:String
-    let address:UserAddress
-    let phone:String?
-    let website:String?
-    let company:UserCompany?
+    let id:Int?
+    let name:String?
+    let address:UserAddress?
     
     init(user:User){
         self.id = user.id
         self.name = user.name
         self.address = user.address
-        self.phone = user.phone
-        self.website = user.website
-        self.company = user.company
+    }
+    
+    func getName()->String?{
+        return name
+    }
+    
+    func getId()->Int?{
+        return id
+    }
+    func getAddress()->String?{
+        return "\(address?.street), \(address?.suite), \(address?.city)\n\(address?.zipcode)"
     }
 }
