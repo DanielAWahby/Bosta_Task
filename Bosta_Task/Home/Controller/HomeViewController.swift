@@ -8,10 +8,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    var albumTableView : UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    setupTableView()
 }
 

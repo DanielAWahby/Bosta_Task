@@ -9,13 +9,10 @@ import UIKit
 
 class UserAlbumCell: UITableViewCell {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupTextLabel()
+    var albumViewModel : AlbumViewModel! {
+        didSet{
+            textLabel?.text = albumViewModel.title
+        }
     }
     
-    func setupTextLabel(){
-        self.textLabel?.numberOfLines = 1
-        self.textLabel?.textColor = .black
-    }
 }
