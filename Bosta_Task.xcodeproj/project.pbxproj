@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71330CB276CF84A007DAD96 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = A71330CA276CF84A007DAD96 /* CombineMoya */; };
+		A71330CD276CF84A007DAD96 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A71330CC276CF84A007DAD96 /* Moya */; };
+		A7232450276CF97B001606D7 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = A723244F276CF97B001606D7 /* NVActivityIndicatorView */; };
 		A77D973F276C89C700403081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D973E276C89C700403081 /* AppDelegate.swift */; };
 		A77D9741276C89C700403081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D9740276C89C700403081 /* SceneDelegate.swift */; };
 		A77D9743276C89C700403081 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D9742276C89C700403081 /* HomeViewController.swift */; };
@@ -47,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71330CD276CF84A007DAD96 /* Moya in Frameworks */,
+				A71330CB276CF84A007DAD96 /* CombineMoya in Frameworks */,
+				A7232450276CF97B001606D7 /* NVActivityIndicatorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +193,11 @@
 			dependencies = (
 			);
 			name = Bosta_Task;
+			packageProductDependencies = (
+				A71330CA276CF84A007DAD96 /* CombineMoya */,
+				A71330CC276CF84A007DAD96 /* Moya */,
+				A723244F276CF97B001606D7 /* NVActivityIndicatorView */,
+			);
 			productName = Bosta_Task;
 			productReference = A77D973B276C89C700403081 /* Bosta_Task.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,10 @@
 				Base,
 			);
 			mainGroup = A77D9732276C89C600403081;
+			packageReferences = (
+				A71330C9276CF84A007DAD96 /* XCRemoteSwiftPackageReference "Moya" */,
+				A723244E276CF97B001606D7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+			);
 			productRefGroup = A77D973C276C89C700403081 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -329,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -384,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -472,6 +487,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A71330C9276CF84A007DAD96 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A723244E276CF97B001606D7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A71330CA276CF84A007DAD96 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A71330C9276CF84A007DAD96 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		A71330CC276CF84A007DAD96 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A71330C9276CF84A007DAD96 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		A723244F276CF97B001606D7 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A723244E276CF97B001606D7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A77D9733276C89C600403081 /* Project object */;
 }
