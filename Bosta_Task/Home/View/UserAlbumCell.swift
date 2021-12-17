@@ -14,5 +14,7 @@ class UserAlbumCell: UITableViewCell {
             textLabel?.text = albumViewModel.title
         }
     }
-    
+    override class func awakeFromNib() {
+        self.awakeFromNib()
+    }
 }
