@@ -6,3 +6,29 @@
 //
 
 import Foundation
+
+struct User:Codable{
+    var id:Int?
+    var name:String?
+    var address:UserAddress?
+    var phone:String?
+    var website:String?
+    var company:UserCompany?
+}
+
+struct UserAddress:Codable{
+    var street:String?
+    var suite:String?
+    var city:String?
+    var zipcode:String?
+    var geo:UserGeolocation?
+}
+struct UserGeolocation:Codable{
+    var lat:String?
+    var long:String?
+}
+struct UserCompany:Codable{
+    var name:String?
+    var catchPhrase:String?
+    var bs:String?
+}
