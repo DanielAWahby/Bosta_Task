@@ -18,7 +18,7 @@ class ProfileView: UIView {
             addressLabel.text = userViewModel.getAddress()
         }
     }
-    init() {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setupHeaderLabel()
         setupUserLabels()
