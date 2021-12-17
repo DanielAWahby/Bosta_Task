@@ -28,6 +28,6 @@ struct UserViewModel{
         return id
     }
     func getAddress()->String?{
-        return "\(address?.street), \(address?.suite), \(address?.city)\n\(address?.zipcode)"
+        return "\(address?.street ?? ""), \(address?.suite ?? ""), \(address?.city ?? "")\n\(address?.zipcode ?? "")"
     }
 }

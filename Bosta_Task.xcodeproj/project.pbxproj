@@ -11,6 +11,7 @@
 		A71330CD276CF84A007DAD96 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A71330CC276CF84A007DAD96 /* Moya */; };
 		A7232450276CF97B001606D7 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = A723244F276CF97B001606D7 /* NVActivityIndicatorView */; };
 		A7232452276CFF1B001606D7 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7232451276CFF1A001606D7 /* AlbumViewModel.swift */; };
+		A7232458276D1FAD001606D7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7232457276D1FAD001606D7 /* ProfileView.swift */; };
 		A77D973F276C89C700403081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D973E276C89C700403081 /* AppDelegate.swift */; };
 		A77D9741276C89C700403081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D9740276C89C700403081 /* SceneDelegate.swift */; };
 		A77D9743276C89C700403081 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D9742276C89C700403081 /* HomeViewController.swift */; };
@@ -22,13 +23,14 @@
 		A77D975C276C8BAA00403081 /* UserAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D975A276C8BAA00403081 /* UserAlbumCell.swift */; };
 		A77D9763276C8C7400403081 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D9762276C8C7400403081 /* AlbumViewController.swift */; };
 		A77D976B276C8D0C00403081 /* AlbumPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D976A276C8D0C00403081 /* AlbumPhotoModel.swift */; };
-		A77D976D276C8D1C00403081 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D976C276C8D1C00403081 /* AlbumViewModel.swift */; };
+		A77D976D276C8D1C00403081 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D976C276C8D1C00403081 /* PhotoViewModel.swift */; };
 		A77D9770276C8D4A00403081 /* AlbumPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D976E276C8D4A00403081 /* AlbumPhotoCell.swift */; };
 		A77D9775276C9C9900403081 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D9774276C9C9900403081 /* AlbumModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A7232451276CFF1A001606D7 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		A7232457276D1FAD001606D7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A77D973B276C89C700403081 /* Bosta_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bosta_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77D973E276C89C700403081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A77D9740276C89C700403081 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +44,7 @@
 		A77D975A276C8BAA00403081 /* UserAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumCell.swift; sourceTree = "<group>"; };
 		A77D9762276C8C7400403081 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		A77D976A276C8D0C00403081 /* AlbumPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotoModel.swift; sourceTree = "<group>"; };
-		A77D976C276C8D1C00403081 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		A77D976C276C8D1C00403081 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		A77D976E276C8D4A00403081 /* AlbumPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotoCell.swift; sourceTree = "<group>"; };
 		A77D9774276C9C9900403081 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				A77D975A276C8BAA00403081 /* UserAlbumCell.swift */,
+				A7232457276D1FAD001606D7 /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,7 +178,7 @@
 		A77D9773276C8D6A00403081 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A77D976C276C8D1C00403081 /* AlbumViewModel.swift */,
+				A77D976C276C8D1C00403081 /* PhotoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -261,8 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7232452276CFF1B001606D7 /* AlbumViewModel.swift in Sources */,
+				A7232458276D1FAD001606D7 /* ProfileView.swift in Sources */,
 				A77D9770276C8D4A00403081 /* AlbumPhotoCell.swift in Sources */,
-				A77D976D276C8D1C00403081 /* AlbumViewModel.swift in Sources */,
+				A77D976D276C8D1C00403081 /* PhotoViewModel.swift in Sources */,
 				A77D975C276C8BAA00403081 /* UserAlbumCell.swift in Sources */,
 				A77D9743276C89C700403081 /* HomeViewController.swift in Sources */,
 				A77D9753276C8A0400403081 /* UserViewModel.swift in Sources */,
