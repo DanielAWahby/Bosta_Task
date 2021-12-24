@@ -18,14 +18,4 @@ struct UserAddress:Codable{
     var suite:String?
     var city:String?
     var zipcode:String?
-    var geo:UserGeolocation?
-}
-struct UserGeolocation:Codable{
-    var lat:String?
-    var long:String?
-}
-struct UserCompany:Codable{
-    var name:String?
-    var catchPhrase:String?
-    var bs:String?
 }
