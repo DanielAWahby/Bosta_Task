@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,6 +49,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubb-nC-lXh">
+                                <rect key="frame" x="352.5" y="62.5" width="41.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ubb-nC-lXh" secondAttribute="height" id="5s3-7Y-egU"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="arrow.clockwise.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="reloadUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Sx-VM-xiI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,13 +71,16 @@
                             <constraint firstItem="vbN-mf-kC2" firstAttribute="top" secondItem="ahS-gC-6Zu" secondAttribute="bottom" constant="30" id="BSm-Pn-tzu"/>
                             <constraint firstItem="Noc-q9-Yox" firstAttribute="top" secondItem="X8S-Ki-ePR" secondAttribute="bottom" constant="20" id="HdI-cl-Y6o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vbN-mf-kC2" secondAttribute="bottom" id="KRb-i0-ORq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubb-nC-lXh" secondAttribute="trailing" constant="20" id="SgQ-Qi-ZDA"/>
                             <constraint firstItem="Noc-q9-Yox" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="WwM-C2-ewA"/>
                             <constraint firstItem="w2R-QJ-2lJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XoY-Fw-Scc"/>
                             <constraint firstItem="X8S-Ki-ePR" firstAttribute="top" secondItem="w2R-QJ-2lJ" secondAttribute="bottom" constant="30" id="bUy-YY-mtz"/>
                             <constraint firstItem="ahS-gC-6Zu" firstAttribute="top" secondItem="Noc-q9-Yox" secondAttribute="bottom" constant="30" id="hj6-XI-FK3"/>
+                            <constraint firstItem="ubb-nC-lXh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.1" id="iqO-nc-e7U"/>
                             <constraint firstItem="w2R-QJ-2lJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pFa-Ul-jzW"/>
                             <constraint firstItem="ahS-gC-6Zu" firstAttribute="leading" secondItem="Noc-q9-Yox" secondAttribute="leading" id="usc-Db-DOJ"/>
                             <constraint firstItem="X8S-Ki-ePR" firstAttribute="leading" secondItem="w2R-QJ-2lJ" secondAttribute="leading" id="xuO-FH-W9J"/>
+                            <constraint firstItem="ubb-nC-lXh" firstAttribute="centerY" secondItem="w2R-QJ-2lJ" secondAttribute="centerY" id="zp3-dE-CQC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -78,4 +94,10 @@
             <point key="canvasLocation" x="89.855072463768124" y="135.9375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.clockwise.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

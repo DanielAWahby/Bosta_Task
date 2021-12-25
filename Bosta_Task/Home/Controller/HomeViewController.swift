@@ -6,19 +6,24 @@
 //
 
 import UIKit
+import CombineMoya
+import Moya
+import Combine
+import Network
 
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+    
+    let provider = MoyaProvider<Service>()
     
     var albumViewModels : [AlbumViewModel]?
     
     var userViewModel : UserViewModel?{
-        didSet{
+        didSet {
             userNameLabel.text = userViewModel?.getName()
             addressLabel.text = userViewModel?.getAddress()
         }
     }
-    
-//    var profileView = ProfileView()
+    var observer : AnyCancellable?
     
     @IBOutlet weak var userNameLabel:UILabel!
     @IBOutlet weak var addressLabel:UILabel!
@@ -26,24 +31,25 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupProfileView()
         setupTableView()
-        
+        reloadUser(self)
     }
-    
-//    func setupProfileView(){
-    
-//        profileView = ProfileView(viewModel: )
 //
-////        self.view.addSubview(profileView)
-////        profileView.translatesAutoresizingMaskIntoConstraints = false
-////        profileView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-////        profileView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-//        profileView.backgroundColor = .systemOrange
-//        profileView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height / 3)
-//
-//    }
-    
+    @IBAction func reloadUser(_ sender: Any) {        
+        observer = provider.requestPublisher(.allUsers, callbackQueue: .main)
+            .sink(receiveCompletion: { completion in
+                print(completion)
+            }, receiveValue: { response in
+                if response.statusCode == 200 {
+                    do {
+                        self.userViewModel = UserViewModel(user: (try JSONDecoder().decode([User].self, from: response.data)).randomElement() ?? User())
+                    } catch{
+                        print(error.localizedDescription)
+                        self.reloadUser(self)
+                    }
+                }
+            })
+    }
     func setupTableView(){
         albumTableView.register(UserAlbumCell.self, forCellReuseIdentifier: "albumCell")
         albumTableView.delegate = self
