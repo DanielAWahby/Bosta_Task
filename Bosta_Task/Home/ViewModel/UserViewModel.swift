@@ -10,9 +10,9 @@ import Foundation
 
 struct UserViewModel{
     
-    let id:Int?
-    let name:String?
-    let address:UserAddress?
+    private let id:Int?
+    private let name:String?
+    private let address:UserAddress?
     
     init(user:User){
         self.id = user.id

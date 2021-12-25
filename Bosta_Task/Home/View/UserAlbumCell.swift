@@ -11,7 +11,7 @@ class UserAlbumCell: UITableViewCell {
     
     var albumViewModel : AlbumViewModel! {
         didSet{
-            textLabel?.text = albumViewModel.title
+            textLabel?.text = albumViewModel.getAlbumTitle()
         }
     }
     override class func awakeFromNib() {
