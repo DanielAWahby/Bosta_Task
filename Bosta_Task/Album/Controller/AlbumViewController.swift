@@ -17,8 +17,9 @@ class AlbumViewController: UIViewController {
     @IBOutlet weak var photosCollectionView : UICollectionView!
     @IBOutlet weak var searchBar : UISearchBar!
     @IBOutlet weak var profileLabel:UILabel!
+    @IBOutlet weak var titleLabel:UILabel!
     
-     private var passedID: Int {
+    private var passedID: Int {
         set {
             self.passedID = newValue
         }
@@ -32,8 +33,12 @@ class AlbumViewController: UIViewController {
         getPhotos()
     }
     func setup(){
-        profileLabel.text = UserDefaults.standard.string(forKey: "savedIntitials")
-        
+        profileLabel.text = UserDefaults.standard.string(forKey: "savedIntitials") ?? ""
+        view.layoutIfNeeded()
+        profileLabel.layer.cornerRadius = profileLabel.frame.size.height / 2
+        profileLabel.clipsToBounds = true
+        view.layoutIfNeeded()
+        searchBar.delegate = self
     }
     
     func getPhotos(){
@@ -56,5 +61,20 @@ class AlbumViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+    }
+}
+
+extension AlbumViewController : UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text?.removeAll()
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    }
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    
     }
 }

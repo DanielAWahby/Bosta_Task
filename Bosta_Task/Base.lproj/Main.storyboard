@@ -104,9 +104,84 @@
             </objects>
             <point key="canvasLocation" x="89.855072463768124" y="135.9375"/>
         </scene>
+        <!--Album View Controller-->
+        <scene sceneID="W3V-7x-Zaj">
+            <objects>
+                <viewController id="cNd-Pr-sY1" customClass="AlbumViewController" customModule="Bosta_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2p5-8X-Hoq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quidem molestiae enim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-D1-LOZ">
+                                <rect key="frame" x="10" y="54" width="332.5" height="38.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LYp-DP-moD">
+                                <rect key="frame" x="0.0" y="112.5" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ohj-vE-dvn">
+                                <rect key="frame" x="0.0" y="163.5" width="414" height="698.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SIj-4h-NSw">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQ8-3N-vL0">
+                                <rect key="frame" x="362.5" y="52.5" width="41.5" height="41.5"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fQ8-3N-vL0" secondAttribute="height" multiplier="1:1" id="zvs-K4-EDM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G2n-GL-QUN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G2n-GL-QUN" firstAttribute="trailing" secondItem="ohj-vE-dvn" secondAttribute="trailing" id="0gA-FA-Vfr"/>
+                            <constraint firstItem="dhL-D1-LOZ" firstAttribute="top" secondItem="G2n-GL-QUN" secondAttribute="top" constant="10" id="1LQ-e8-GtJ"/>
+                            <constraint firstItem="LYp-DP-moD" firstAttribute="width" secondItem="2p5-8X-Hoq" secondAttribute="width" id="EL7-Kd-X4P"/>
+                            <constraint firstItem="dhL-D1-LOZ" firstAttribute="leading" secondItem="G2n-GL-QUN" secondAttribute="leading" constant="10" id="EgE-zb-0pE"/>
+                            <constraint firstItem="ohj-vE-dvn" firstAttribute="top" secondItem="LYp-DP-moD" secondAttribute="bottom" id="Gta-OP-6we"/>
+                            <constraint firstItem="fQ8-3N-vL0" firstAttribute="width" secondItem="2p5-8X-Hoq" secondAttribute="width" multiplier="0.1" id="NOE-y2-rqN"/>
+                            <constraint firstItem="LYp-DP-moD" firstAttribute="top" secondItem="dhL-D1-LOZ" secondAttribute="bottom" constant="20" id="P6b-T5-vdP"/>
+                            <constraint firstItem="LYp-DP-moD" firstAttribute="centerX" secondItem="2p5-8X-Hoq" secondAttribute="centerX" id="TTu-EV-aJM"/>
+                            <constraint firstItem="fQ8-3N-vL0" firstAttribute="leading" secondItem="dhL-D1-LOZ" secondAttribute="trailing" constant="20" id="eu7-Q5-nfk"/>
+                            <constraint firstItem="fQ8-3N-vL0" firstAttribute="centerY" secondItem="dhL-D1-LOZ" secondAttribute="centerY" id="hWI-P8-dxT"/>
+                            <constraint firstItem="G2n-GL-QUN" firstAttribute="trailing" secondItem="fQ8-3N-vL0" secondAttribute="trailing" constant="10" id="rCT-Ij-HWq"/>
+                            <constraint firstItem="ohj-vE-dvn" firstAttribute="leading" secondItem="G2n-GL-QUN" secondAttribute="leading" id="toJ-cj-oXh"/>
+                            <constraint firstItem="G2n-GL-QUN" firstAttribute="bottom" secondItem="ohj-vE-dvn" secondAttribute="bottom" id="ySJ-qW-WXe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photosCollectionView" destination="ohj-vE-dvn" id="qea-ia-x95"/>
+                        <outlet property="profileLabel" destination="fQ8-3N-vL0" id="5wL-0S-l1X"/>
+                        <outlet property="searchBar" destination="LYp-DP-moD" id="Vud-SR-jnM"/>
+                        <outlet property="titleLabel" destination="dhL-D1-LOZ" id="TL6-dh-XaR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfY-T3-vYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="590" y="165"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.clockwise.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
