@@ -8,9 +8,13 @@
 import UIKit
 
 class AlbumPhotoCell: UICollectionViewCell {
-    
-    var cellImageView: UIImageView = {
-        let imageView = UIImageView()
+    var photoViewModel : PhotoViewModel! {
+        didSet{
+            cellImageView.loadImage(from: URL(string: photoViewModel.getThumbnailURL())!)
+        }
+    }
+    var cellImageView: CustomImageView = {
+        let imageView = CustomImageView()
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -35,3 +39,4 @@ class AlbumPhotoCell: UICollectionViewCell {
 
     }
 }
+
