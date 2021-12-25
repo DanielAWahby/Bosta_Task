@@ -14,7 +14,11 @@ class AlbumViewController: UIViewController {
     
     var photoViewModels = [PhotoViewModel]()
     let provider = MoyaProvider<Service>()
-    private var passedID: Int {
+    @IBOutlet weak var photosCollectionView : UICollectionView!
+    @IBOutlet weak var searchBar : UISearchBar!
+    @IBOutlet weak var profileLabel:UILabel!
+    
+     private var passedID: Int {
         set {
             self.passedID = newValue
         }
@@ -24,7 +28,12 @@ class AlbumViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         getPhotos()
+    }
+    func setup(){
+        profileLabel.text = UserDefaults.standard.string(forKey: "savedIntitials")
+        
     }
     
     func getPhotos(){
