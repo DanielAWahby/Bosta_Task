@@ -13,10 +13,12 @@ struct PhotoViewModel{
     private let title:String?
     private let url:String?
     private let thumbnailUrl:String?
-    init(album:Album) {
-        self.userId = album.userId
-        self.id = album.id
-        self.title = album.title
+    init(_ photo:Photo) {
+        self.albumId = photo.albumId
+        self.id = photo.id
+        self.title = photo.title
+        self.url = photo.url
+        self.thumbnailUrl = photo.thumbnailUrl
     }
     func getAlbumId() -> Int{
         return albumId ?? 0
@@ -28,9 +30,9 @@ struct PhotoViewModel{
         return title ?? ""
     }
     func getURL() -> String{
-        return url
+        return url ?? ""
     }
     func getThumbnailURL() -> String{
-        return thumbnailUrl
+        return thumbnailUrl ?? ""
     }
 }
