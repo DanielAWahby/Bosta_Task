@@ -119,7 +119,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LYp-DP-moD">
-                                <rect key="frame" x="0.0" y="112.5" width="414" height="51"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ohj-vE-dvn">
