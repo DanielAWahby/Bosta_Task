@@ -25,9 +25,9 @@ extension Service : TargetType {
         case .allUsers:
             return "/users/"
         case .userAlbums(userid: let id):
-            return "/albums/\(id)"
+            return "/albums/"
         case .albumPhotos(albumId: let id):
-            return "/photos/\(id)"
+            return "/photos/"
         }
     }
     
@@ -40,9 +40,9 @@ extension Service : TargetType {
         case .allUsers:
             return .requestPlain
         case .userAlbums(let id):
-            return .requestParameters(parameters: ["userId":id], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["userId":id], encoding: URLEncoding.default)
         case .albumPhotos(let id):
-            return .requestParameters(parameters: ["albumId":id], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["albumId":id], encoding: URLEncoding.default)
         
         }
     }

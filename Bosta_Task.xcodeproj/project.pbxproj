@@ -11,7 +11,7 @@
 		A71330CD276CF84A007DAD96 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A71330CC276CF84A007DAD96 /* Moya */; };
 		A7232450276CF97B001606D7 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = A723244F276CF97B001606D7 /* NVActivityIndicatorView */; };
 		A7232452276CFF1B001606D7 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7232451276CFF1A001606D7 /* AlbumViewModel.swift */; };
-		A77941552776660C002EEA9B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77941542776660C002EEA9B /* UserService.swift */; };
+		A77941552776660C002EEA9B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77941542776660C002EEA9B /* Service.swift */; };
 		A77D973F276C89C700403081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D973E276C89C700403081 /* AppDelegate.swift */; };
 		A77D9741276C89C700403081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D9740276C89C700403081 /* SceneDelegate.swift */; };
 		A77D9743276C89C700403081 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D9742276C89C700403081 /* HomeViewController.swift */; };
@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		A7232451276CFF1A001606D7 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
-		A77941542776660C002EEA9B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		A77941542776660C002EEA9B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A77D973B276C89C700403081 /* Bosta_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bosta_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77D973E276C89C700403081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A77D9740276C89C700403081 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 				A77D975E276C8BB100403081 /* View */,
 				A77D9756276C8B2E00403081 /* ViewModel */,
 				A77D9755276C8B2300403081 /* Controller */,
-				A77941542776660C002EEA9B /* UserService.swift */,
+				A77941542776660C002EEA9B /* Service.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 				A77D975C276C8BAA00403081 /* UserAlbumCell.swift in Sources */,
 				A77D9743276C89C700403081 /* HomeViewController.swift in Sources */,
 				A77D9753276C8A0400403081 /* UserViewModel.swift in Sources */,
-				A77941552776660C002EEA9B /* UserService.swift in Sources */,
+				A77941552776660C002EEA9B /* Service.swift in Sources */,
 				A77D973F276C89C700403081 /* AppDelegate.swift in Sources */,
 				A77D9758276C8B5700403081 /* UserModel.swift in Sources */,
 				A77D976B276C8D0C00403081 /* AlbumPhotoModel.swift in Sources */,
