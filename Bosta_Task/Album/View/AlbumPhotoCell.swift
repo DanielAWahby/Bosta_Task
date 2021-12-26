@@ -10,7 +10,8 @@ import UIKit
 class AlbumPhotoCell: UICollectionViewCell {
     var photoViewModel : PhotoViewModel! {
         didSet{
-            cellImageView.loadImage(from: URL(string: photoViewModel.getThumbnailURL())!)
+            cellImageView.image = UIImage(named: "AppIcon")
+//            cellImageView.loadImage(from: URL(string: photoViewModel.getThumbnailURL())!)
         }
     }
     var cellImageView: CustomImageView = {

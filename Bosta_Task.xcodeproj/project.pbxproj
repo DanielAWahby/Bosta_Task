@@ -86,13 +86,13 @@
 			children = (
 				A77D973E276C89C700403081 /* AppDelegate.swift */,
 				A77D9740276C89C700403081 /* SceneDelegate.swift */,
+				A75D32872777D7100040C769 /* CustomImageView.swift */,
 				A77D9754276C8B1700403081 /* Home */,
 				A77D9764276C8C8000403081 /* Album */,
 				A77D9744276C89C700403081 /* Main.storyboard */,
 				A77D9747276C89CA00403081 /* Assets.xcassets */,
 				A77D9749276C89CA00403081 /* LaunchScreen.storyboard */,
 				A77D974C276C89CA00403081 /* Info.plist */,
-				A75D32872777D7100040C769 /* CustomImageView.swift */,
 			);
 			path = Bosta_Task;
 			sourceTree = "<group>";

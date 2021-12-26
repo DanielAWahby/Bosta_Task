@@ -45,15 +45,15 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBAction func reloadUser(_ sender: Any) {
         activityIndicator.startAnimating()
         observer = provider.requestPublisher(.allUsers, callbackQueue: .main)
-          .sink { completion in
-              switch completion {
-              case let .failure(error):
-                  print(error)
-                  self.activityIndicator.stopAnimating()
-              case let.finished:
-                  return
-              }
-              
+            .sink { completion in
+                switch completion {
+                case let .failure(error):
+                    print(error)
+                    self.activityIndicator.stopAnimating()
+                case let.finished:
+                    return
+                }
+                
             } receiveValue: { response in
                 if response.statusCode == 200 {
                     do {
@@ -69,7 +69,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     }
                 }
             }
-
+        
     }
     func getAlbums(_ id:Int){
         provider.requestPublisher(.userAlbums(userid: id), callbackQueue: .main)
@@ -108,6 +108,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell") as? UserAlbumCell{
             cell.albumViewModel = albumViewModels[indexPath.row]
+            let selectionBackground = UIView()
+            selectionBackground.backgroundColor = UIColor(named: "AccentColor")
+            cell.selectedBackgroundView = selectionBackground
             return cell
         }
         else{
@@ -115,7 +118,11 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(albumViewModels[indexPath.row].getAlbumId())
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotosController") as? AlbumViewController
+        viewController?.passedTitle = albumViewModels[indexPath.row].getAlbumTitle()
+        viewController?.passedID = albumViewModels[indexPath.row].getAlbumId()
+        present(viewController!, animated: true, completion:nil)
+        
     }
 }
 

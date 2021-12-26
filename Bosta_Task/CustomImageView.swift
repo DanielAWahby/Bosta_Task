@@ -55,7 +55,7 @@ class CustomImageView: UIImageView {
     }
     func addActivity(){
         //        activityIndicatorView = NVActivityIndicatorView(frame:CGRect(x: 0, y: 0, width: self.frame.width / 6, height: self.frame.width / 6), type: .ballClipRotate, color: UIColor.lightGray, padding: 10)
-        activityIndicatorView.color = .systemGreen
+        activityIndicatorView.color = UIColor(named: "AccentColor")
         activityIndicatorView.backgroundColor = .clear
         addSubview(activityIndicatorView)
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false

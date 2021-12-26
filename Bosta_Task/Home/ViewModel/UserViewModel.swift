@@ -19,7 +19,7 @@ struct UserViewModel{
         self.name = user.name
         let components = user.name?.capitalized.components(separatedBy: " ")
         let firstNameInitial = String(components?[0].first ?? "_")
-        let lastNameInitial = String(components?[1].first ?? "_")
+        let lastNameInitial = String(components?[components!.count - 1].first ?? "_")
         let initials = "\(firstNameInitial)\(lastNameInitial)"
         UserDefaults.standard.set(initials,forKey: "savedIntitials")
         self.address = user.address
